@@ -1,0 +1,321 @@
+vt_dai_ly:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtDaiLy
+    module:               vtManageDaiLy
+    prefix_path:          /vtManageDaiLy
+    column:               id
+    with_wildcard_routes: true
+
+vt_serial_code:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtSerialCode
+    module:               vtManageSerialCode
+    prefix_path:          /vtManageSerialCode
+    column:               id
+    with_wildcard_routes: true
+vt_charg_amount:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtChargAmount
+    module:               vtManageChargAmount
+    prefix_path:          /vtManageChargAmount
+    column:               id
+    with_wildcard_routes: true
+gameflash_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GameflashType
+    module:               vtManageGameflashType
+    prefix_path:          /vtManageGameflashType
+    column:               id
+    with_wildcard_routes: true
+
+emoticon:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Emoticon
+    module:               vtManageEmoticon
+    prefix_path:          /vtManageEmoticon
+    column:               id
+    with_wildcard_routes: true
+
+options:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Options
+    module:               vtManageOptions
+    prefix_path:          /vtManageOptions
+    column:               id
+    with_wildcard_routes: true
+
+gameflash_vtManageGameflash:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Gameflash
+    module:               vtManageGameflash
+    prefix_path:          /vtManageGameflash
+    column:               id
+    with_wildcard_routes: true
+
+announcement_readed_vtManageAnnouncementReaded:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                AnnouncementReaded
+    module:               vtManageAnnouncementReaded
+    prefix_path:          /vtManageAnnouncementReaded
+    column:               id
+    with_wildcard_routes: true
+
+message:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Message
+    module:               vtManageMessage
+    prefix_path:          /vtManageMessage
+    column:               id
+    with_wildcard_routes: true
+
+announcement_readed:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                AnnouncementReaded
+    module:               vtManagerAnnouncementReaded
+    prefix_path:          /vtManagerAnnouncementReaded
+    column:               id
+    with_wildcard_routes: true
+
+gameflash:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Gameflash
+    module:               vtManageGameflash
+    prefix_path:          /vtManageGameflash
+    column:               id
+    with_wildcard_routes: true
+
+vtp_article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpArticle
+    module:               vtManageArticle
+    prefix_path:          /vtManageArticle
+    column:               id
+    with_wildcard_routes: true
+
+trans_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TransType
+    module:               vtManageTransType
+    prefix_path:          /vtManageTransType
+    column:               id
+    with_wildcard_routes: true
+
+sms_value:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                SmsValue
+    module:               vtManageSmsValue
+    prefix_path:          /vtManageSmsValue
+    column:               id
+    with_wildcard_routes: true
+vtp_article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpArticle
+    module:               vtManageArticle
+    prefix_path:          /vtManageArticle
+    column:               id
+    with_wildcard_routes: true
+
+announcement:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Announcement
+    module:               vtManageAnnouncement
+    prefix_path:          /vtManageAnnouncement
+    column:               id
+    with_wildcard_routes: true
+
+cards_value:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CardsValue
+    module:               vtManageCardsValue
+    prefix_path:          /vtManageCardsValue
+    column:               id
+    with_wildcard_routes: true
+
+level:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Level
+    module:               vtManageLevel
+    prefix_path:          /vtManageLevel
+    column:               id
+    with_wildcard_routes: true
+
+room:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Room
+    module:               vtManageRoom
+    prefix_path:          /vtManageRoom
+    column:               id
+    with_wildcard_routes: true
+
+game:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Game
+    module:               vtManageGame
+    prefix_path:          /vtManageGame
+    column:               id
+    with_wildcard_routes: true
+
+avatar:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Avatar
+    module:               vtManageAvatar
+    prefix_path:          /vtManageAvatar
+    column:               id
+    with_wildcard_routes: true
+
+avatar_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                AvatarCategory
+    module:               vtManageAvatarCategory
+    prefix_path:          /vtManageAvatarCategory
+    column:               id
+    with_wildcard_routes: true
+
+vt_word:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtWord
+    module:               vtManageWord
+    prefix_path:          /vtManageWord
+    column:               id
+    with_wildcard_routes: true
+
+vtp_link:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpLink
+    module:               vtpManageLink
+    prefix_path:          /vtpManageLink
+    column:               id
+    with_wildcard_routes: true
+
+vtp_html:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpHtml
+    module:               vtManageHtml
+    prefix_path:          /vtManageHtml
+    column:               id
+    with_wildcard_routes: true
+
+vtp_menu:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpMenu
+    module:               vtManageMenu
+    prefix_path:          /vtManageMenu
+    column:               id
+    with_wildcard_routes: true
+
+
+vtp_advertise_location:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpAdvertiseLocation
+    module:               vtManageAdvertiseLocation
+    prefix_path:          /vtManageAdvertiseLocation
+    column:               id
+    with_wildcard_routes: true
+
+vtp_advertise_image:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpAdvertiseImage
+    module:               vtManageAdvertiseImages
+    prefix_path:          /vtManageAdvertiseImages
+    column:               id
+    with_wildcard_routes: true
+
+vtp_advertise:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpAdvertise
+    module:               vtManageAdvertises
+    prefix_path:          /vtManageAdvertises
+    column:               id
+    with_wildcard_routes: true
+sf_guard_change_password:
+  url:   /guard/change_password
+  param: { module: sfGuardAuth, action: changePassword }
+
+sf_guard_group:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardGroup
+    module:               sfGuardGroup
+    prefix_path:          /sfGuardGroup
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_user:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardUser
+    module:               sfGuardUser
+    prefix_path:          /sfGuardUser
+    column:               id
+    with_wildcard_routes: true
+ 
+sf_guard_permission:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardPermission
+    module:               sfGuardPermission
+    prefix_path:          /sfGuardPermission
+    column:               id
+    with_wildcard_routes: true
+vtp_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VtpCategory
+    module:               vtpCategory
+    prefix_path:          /vtpCategory
+    column:               id
+    with_wildcard_routes: true
+ajax_load_category_news:
+  url:   /ajax/AjaxLoadCategoryNews
+  param: { module: ajax, action: ajaxLoadCategoryNews }
+ajax_load_category_service:
+  url:   /ajax/AjaxLoadCategoryService
+  param: { module: ajax, action: ajaxLoadCategoryService }
+  
+homepage:
+  url:   /
+  param: { module: vtHomePage, action: index }
+pageEN:
+  url: /?lang=en
+  param: {  module: vtHomePage, action: index }
+
+pageVI:
+  url: /?lang=vi
+  param: {  module: vtHomePage, action: index }
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+  

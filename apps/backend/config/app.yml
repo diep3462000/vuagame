@@ -1,0 +1,108 @@
+all:
+  # Change these if you'd like to move/modify CSS & JS files
+  tmcTwitterBootstrapPlugin:
+    bootstrap_path:              /tmcTwitterBootstrapPlugin/css/bootstrap.min.css
+    responsive_bootstrap_path:   /tmcTwitterBootstrapPlugin/css/bootstrap-responsive.min.css
+    admin_styles_path:           /tmcTwitterBootstrapPlugin/css/styles.css
+    jquery_path:                 /tmcTwitterBootstrapPlugin/js/jquery.min.js
+    bootstrap_js_path:           /tmcTwitterBootstrapPlugin/js/bootstrap.min.js
+    admin_js_path:               /tmcTwitterBootstrapPlugin/js/global.js
+
+#    # The route/URI to use for the nav bar's "brand" link
+#    profile_route: @homepage?username=
+#    # The link next for the nav bar's "brand" link
+#    dashboard_name: Administration
+    header:
+      menu:
+        Quản trị hệ thống:
+          credentials: [admin]
+          dropdown:
+            Danh sách người dùng:
+              route: sf_guard_user
+            Danh sách người dùng Frontend:
+              route: vtp_users
+            Danh sách quyền hạn:
+              route: sf_guard_permission
+        Quản lý game:
+          credentials: [[admin]]
+          dropdown:
+            Quản lý Gameflash:
+              credentials: [[admin]]
+              route: gameflash
+            Quản lý chuyên mục gameflash:
+              credentials: [[admin]]
+              route: gameflash_type
+            Quản lý Game:
+              credentials: [[admin]]
+              route: game
+            Quản lý chuyên mục game:
+              credentials: [admin]
+              route: vtp_category
+            Danh sách Level:
+              credentials: [admin]
+              route: level
+            Quản lý phòng game:
+              credentials: [admin]
+              route: room
+        Quản lý chuyên mục:
+          credentials: [[admin]]
+          dropdown:
+            Quản lý Menu:
+              credentials: [[admin]]
+              route: vtp_menu
+            Quản lý chuyên mục ảnh đại diện:
+              credentials: [[admin]]
+              route: avatar_category
+            Quản lý mệnh giá:
+              credentials: [[admin]]
+              route: vt_charg_amount
+            Quản lý thẻ nạp:
+              credentials: [[admin]]
+              route: vt_serial_code
+            Quản lý đại lý:
+              credentials: [[admin]]
+              route: vt_dai_ly             
+        Quản lý tin nhắn:
+          credentials: [[admin]]
+          dropdown:
+            Quản lý mệnh giá tin nhắn:
+              credentials: [admin]
+              route: sms_value
+            Quản lý lịch sử tin nhắn:
+              credentials: [admin]
+              route: sms_log
+        Các phân hệ khác:
+          credentials: [[admin]]
+          dropdown:
+            Quản lý vị trí Banner - Quảng cáo:
+              credentials: [[admin]]
+              route: vtp_advertise_location
+            Quản lý Banner - Quảng cáo:
+              credentials: [[admin]]
+              route: vtp_advertise
+            Quản lý nội dung:
+              credentials: [[admin]]
+              route: vtp_html
+            Quản lý ngôn từ:
+              credentials: [[admin]]
+              route: vt_word
+            Quản lý thông báo:
+              credentials: [[admin]]
+              route: announcement
+            Quản lý bài viết:
+              credentials: [[admin]]
+              route: vtp_article
+        Ngôn ngữ:
+          dropdown:
+            Tiếng Việt:
+              route: pageVI
+            English:
+              route: pageEN
+  sf_captchagd:
+     image_width:                180 # image width in pixels
+     image_height:               27 # image height in pixels
+     chars:                      "123456789abcdefghijklmnopqrstuvwxyz" # possible chars in captcha
+     length:                     6 # length of captcha
+     font_size:                  14 # font size
+     force_new_captcha:          true # if true - captcha regenerated EVERY request, even if user input true value before
+     fonts: ["akbar/vavobi.ttf"]

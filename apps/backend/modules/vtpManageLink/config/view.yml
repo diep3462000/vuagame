@@ -1,0 +1,11 @@
+## YAML Template.
+---
+indexSuccess:
+  metas:
+    title: Danh sách Liên kết
+newSuccess:
+  metas:
+    title: Thêm mới Liên kết
+editSuccess:
+  metas:
+    title: Chỉnh sửa Liên kết

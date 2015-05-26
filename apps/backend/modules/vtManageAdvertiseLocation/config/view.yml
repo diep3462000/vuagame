@@ -1,0 +1,11 @@
+## YAML Template.
+---
+indexSuccess:
+  metas:
+    title: Danh sách Vị trí Quảng cáo
+newSuccess:
+  metas:
+    title: Thêm mới Vị trí Quảng cáo
+editSuccess:
+  metas:
+    title: Chỉnh sửa Vị trí Quảng cáo

@@ -1,0 +1,39 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           VtpArticle
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          vtp_article
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        title: {label: Tiêu đề}
+        alttitle: {label: Tiêu đề rút gọn}
+        header: {label: Tóm tắt}
+        body: {label: Nội dung}
+        image_path: {label: Hình ảnh}
+        is_hot: {label: Hot}
+        priority: {label: Thứ tự}
+        is_active: {label: Trạng thái}
+        author: {label: Tác giả}
+        created_by: {label: Người tạo}
+      list:
+        title: Danh sách bài viết
+        display: [image_path, title, is_hot, priority, created_by, is_active]
+        object_actions:
+          _edit: {label: Chi tiết}
+          _delete: ~
+      filter:
+        display: [title]
+      form:
+        display: [title, alttitle, header, body, image_path, is_hot, priority,  is_active]
+        class: vtManageArticlesFormAdmin
+      edit:    ~
+      new:     ~

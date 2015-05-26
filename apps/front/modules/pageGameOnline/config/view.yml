@@ -1,0 +1,23 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+all:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title: Viettel Telecom Portal
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - style-navtabs.css
+  
+  javascripts: 
+    - nav-tabs/bootstrap.min.js
+    - nav-tabs/jquery.droptabs.js
+    
+  has_layout:     true
+  layout:         layout

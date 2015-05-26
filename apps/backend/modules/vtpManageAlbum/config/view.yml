@@ -1,0 +1,9 @@
+indexSuccess:
+  metas:
+    title: Danh sách Album
+editSuccess:
+  metas:
+    title: Chỉnh sửa Album
+newSuccess:
+  metas:
+    title: Thêm mới Album

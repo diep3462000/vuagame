@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * pageHome actions.
+ *
+ * @package    VTP2.0
+ * @subpackage pageHome
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class pageGameflashActions extends sfActions
+{
+  public function executeIndex(sfWebRequest $request)
+  {
+      $slug = $request->getParameter('slug');
+      $this->listGameflash = GameflashTable::getListGame($slug);
+
+  }
+    public function executePlay(sfWebRequest $request)
+    {
+        $this->gameflash = GameflashTable::getGameBySlug($request->getParameter('slug'));
+        $this->gameflash->setVisit($this->gameflash->getVisit() + 1);
+        $this->gameflash->save();
+    }
+
+
+}

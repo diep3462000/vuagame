@@ -1,0 +1,34 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           VtChargAmount
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          vt_charg_amount
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _edit: ~
+      fields:  ~
+      list:
+        title: Danh sách mệnh giá
+        display: [charg_amount, description]
+#        actions: { }
+        object_actions:
+          _edit: {label: Chi tiết}
+          _delete: ~
+      filter:
+        display: [description]
+        class: vtManageChargAmountFormAdminFillter
+      form:
+        display: [charg_amount, description]
+        class: vtManageChargAmountFormAdmin
+      edit:
+        title: Chỉnh sửa mệnh giá
+      new:
+        title: Thêm mới mệnh giá

@@ -1,0 +1,9 @@
+all:
+  sf_captchagd:
+     image_width:                180 # image width in pixels
+     image_height:               27 # image height in pixels
+     chars:                      "123456789abcdefghijklmnopqrstuvwxyz" # possible chars in captcha
+     length:                     6 # length of captcha
+     font_size:                  14 # font size
+     force_new_captcha:          true # if true - captcha regenerated EVERY request, even if user input true value before
+     fonts: ["akbar/vavobi.ttf"]

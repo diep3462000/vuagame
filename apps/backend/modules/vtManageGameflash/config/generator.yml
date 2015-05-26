@@ -1,0 +1,30 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           Gameflash
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          gameflash_vtManageGameflash
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Danh sách Gameflash
+        display: [name, category, description, state, visit, screen]
+        actions:
+          _new: {label: Thêm mới}
+        object_actions:
+          _edit: ~
+          _delete: ~
+      filter:
+        display: [name, category,state]
+      form:
+        class: vtManageGameflashFormAdmin
+      edit:    ~
+      new:     ~

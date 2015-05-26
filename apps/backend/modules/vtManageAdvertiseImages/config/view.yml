@@ -1,0 +1,11 @@
+## YAML Template.
+---
+indexSuccess:
+  metas:
+    title: Danh sách Hình ảnh Quảng cáo
+newSuccess:
+  metas:
+    title: Thêm mới Hình ảnh Quảng cáo
+editSuccess:
+  metas:
+    title: Chỉnh sửa Hình ảnh Quảng cáo

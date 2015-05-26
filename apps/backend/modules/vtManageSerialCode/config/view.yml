@@ -1,0 +1,14 @@
+indexSuccess:
+  stylesheets:
+    - bootstrapDaterangepickerMaster/daterangepicker-bs2.css
+    - jsapi.css
+
+  javascripts:
+    - jquery.min.js
+    - bootstrapDaterangepickerMaster/moment.min.js
+    - bootstrapDaterangepickerMaster/daterangepicker.js
+  metas:
+    title: Danh sách thẻ nạp
+newSuccess:
+  metas:
+    title: Thêm mới thẻ nạp

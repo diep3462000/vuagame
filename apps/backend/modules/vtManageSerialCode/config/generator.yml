@@ -1,0 +1,30 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           VtSerialCode
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          vt_serial_code
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields: ~
+      list:
+        actions: {}
+        display: [serial, cardnumber, user_id, charg_amount, status_name, end_date, daily_name, username]
+        object_actions:
+          _edit: {label: Chi tiết}
+          _delete: ~
+      filter:
+        class: vtManageSerialCodeFormAdminFilter
+        display: [dai_ly_id, serial, cardnumber, user_id, type, charg_id]
+      form:
+        display: [charg_id, amount_code, dai_ly_id, end_date]
+        class: vtManageSerialCodeFormAdmin
+      edit:    ~
+      new:     ~

@@ -1,0 +1,38 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           VtpAlbum
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          vtp_album
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name: {label: Tên Album}
+        description: {label: Giới thiệu Album}
+        event_date: {label: Ngày diễn ra sự kiện}
+        priority: {label: Thứ tự hiển thị}
+        is_active: {label: Trạng thái}
+        is_default: {label: Mặc định}
+      list:
+          title: Danh sách Album
+          display: [name, event_date, priority, is_active]
+      filter:  
+        display: [name]
+#        class: vtpAlbumFilterAdmin
+      form:    
+        class: VtpAlbumFormAdmin
+        display: [name, description, priority, event_date, is_active, is_default]
+        fields:
+          name: {label: Tên Album *}
+          description: {label: Giới thiệu Album *}
+      edit:    
+        title: Chỉnh sửa Album
+      new:     
+        title: Thêm mới Album

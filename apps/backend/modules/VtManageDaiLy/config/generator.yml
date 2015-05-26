@@ -1,0 +1,31 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           VtDaiLy
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          vt_dai_ly
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+        _edit: ~
+      fields:
+        name: {label: Tên đại lý}
+        code: {label: Mã đại lý}
+      list:
+        display: [name, code]
+        object_actions:
+          _edit: {label: Chi tiết}
+          _delete: ~
+      filter:
+        display: [name, code]
+      form:
+        display: [name, code]
+        #class: VtDaiLyFormAdmin
+      edit:    ~
+      new:     ~

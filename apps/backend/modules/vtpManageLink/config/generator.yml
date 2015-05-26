@@ -1,0 +1,50 @@
+generator:
+  class: tmcTwitterBootstrapDoctrineGenerator
+  param:
+    model_class:           VtpLink
+    theme:                 tmcTwitterBootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          vtp_link
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name: {label: Tên liên kết}
+        group_id: {label: Nhóm liên kết}
+        file_path: {label: Đường dẫn ảnh}
+        priority: {label: Thứ tự hiển thị}
+        is_active: {label: Hiển thị}
+      list:
+        title: Danh sách liên kết
+        display: [file_path, name, group_id, link, priority, is_active]
+        actions:
+          _new: {label: Thêm mới}
+        object_actions:
+          _edit: {label: Chi tiết}
+          _delete: ~
+      filter:
+        class: vtpManageLinkFilter
+        display: [group_id]
+      form:
+        class: vtpManageLinkForms
+        fields:
+          name: {label: Tên liên kết *}
+          group_id: {label: Nhóm liên kết *}
+          priority: {label: Thứ tự hiển thị}
+          type: {label: Loại đường dẫn}
+          link: {label: Đường dẫn hiện tại}
+          link_content: {label: Bài viết}
+          link_text: {label: Đường dẫn}
+          page: {label: Trang }
+          user_type: {label: Người dùng self-care}
+          category_type: {label: Kiểu chuyên mục}
+        display: [name, group_id,  link, type, link_content, page, category_type, link_text, file_path, priority, is_active]
+      edit:
+        title: Chỉnh sửa liên kết
+      new:
+        title: Thêm mới liên kết

@@ -1,0 +1,115 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+#Trang gioi thieu
+introduction:
+#  Trang hiển thị chi tiết nội dung theo sheet "Giới thiệu"
+  url: /gioi-thieu/:slug
+  param: { module: pageIntroduction, action: index, slug: '' }
+  requirements: { sf_method: get }
+  options: { suffix: .html}
+#huync2
+ 
+quydinh:
+  url: /quydinh/:slug
+  param: { module: pageRegister, action: index, slug: '' }
+  options: { suffix: .html}
+play_gameflash:
+  url: /playgame/:slug
+  param: { module: pageGameflash, action: play, slug: '' }
+  options: { suffix: .html}
+# trang dang ky
+page_register:
+  url: /register/:slug
+  param: { module: pageRegister, action: index, slug: '' }
+  options: { suffix: .html}
+page_loginfb:
+  url: /loginfb
+  param: { module: moduleLoginFb, action: index, slug: '' }
+page_login_google:
+  url: /logingoogle
+  param: { module: moduleLoginFb, action: google, slug: '' }
+  options: { suffix: .html}
+page_article_detail:
+  url: /tin-tuc/:slug
+  param: { module: gArticle, action: index, slug: '' }
+  options: { suffix: .html}
+gamemobile:
+  url: gamemobile/:slug
+  param: { module: pageGamemobile, action: index, slug: "" }
+  options: {suffix: .html}
+user_info:
+  url:   /user/thong-tin-tai-khoan
+  param: { module: pageUserInfo, action: index }
+user_details:
+  url:   /user/detail/:user_name
+  param: { module: pageUserInfo, action: userDetail, user_name: '' }
+clan_info:
+  url:   /clan-info/:clan_id
+  param: { module: pageClan, action: index, clan_id: '' }
+user_cash:
+  url:   /user/nap-tien
+  param: { module: pageUserInfo, action: cash }
+user_change_avatar:
+  url:   /user/avatar
+  param: { module: pageUserInfo, action: avatar }
+user_shop:
+  url:   /user/shop
+  param: { module: pageUserInfo, action: shop }
+user_friends:
+  url:   /user/friends
+  param: { module: pageUserInfo, action: friends }
+user_transaction:
+  url:   /user/transaction
+  param: { module: pageUserInfo, action: transaction }
+user_gift:
+  url:   /user/gift
+  param: { module: pageUserInfo, action: gift }
+user_invite:
+  url:   /user/invite
+  param: { module: pageUserInfo, action: invite }
+user_change_pass:
+  url:   /user/change-pass
+  param: { module: pageUserInfo, action: changePass }
+# ajax
+ajax_login:
+  url: /ajax/login/:slug
+  param: { module: ajax, action: login, slug: '' }
+ajax_login_true:
+  url: /ajax/loginTrue/:slug
+  param: { module: ajax, action: loginTrue, slug: '' }
+ajax_check_login:
+  url: /ajax/checkLoginAjax
+  param: { module: ajax, action: checkLoginAjax, slug: '' }
+ajax_logout:
+  url: /ajax/logout/:slug
+  param: { module: ajax, action: logout, slug: '' }
+ajax_register:
+  url: /ajax/register/:slug
+  param: { module: ajax, action: register, slug: '' }
+# default rules
+flash_check:
+  url: /ajax/checkFlash
+  param: { module: ajax, action: checkFlash }
+game_online:
+  url: game/play/:slug
+  param: {module: pageGameOnline, action: index, slug: ""}
+ajax_load_clan_list_pagination:
+  url: /ajax_load_clan_list_pagination
+  param: {module: ajax, action: loadClanPagination}
+
+homepage:
+  url:   /
+  param: { module: homePage, action: index }
+list_gameflash:
+  url: /game-flash/:slug
+  param: {module: pageGameflash, action: index, slug: ""}
+  options: { suffix: .html}
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

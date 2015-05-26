@@ -1,0 +1,47 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - /theme/css/style.css
+    - /theme/css/stylenews2.css
+    - /theme/css/style_update.css
+    - /theme/css/thickbox.css
+    - /theme/css/menu.css
+    - /theme/css/jqModal.css
+    - /theme/css/slider.css
+    - /theme/css/jquery.ui.all.css
+    # - /theme/css/formValidation.min.css
+#    - bootstrap.css
+
+  javascripts:
+#    - /theme/js/jquery-ui-1.8.14.custom.min.js
+    - jquery.js
+    - /theme/js/plusone.js
+    # - /theme/js/thickbox-compressed.js
+    - /theme/js/mi.js
+    - /theme/js/migame.js
+    - /theme/js/swfobject.js
+    - /theme/js/script.js
+    - /theme/js/jquery.easing.js
+    - /theme/js/lazy.js
+    - /theme/js/jquery.lazyload.min.js
+    - /theme/js/jquery.cycle.all.latest.js
+    # - /theme/js/validate/bootstrap.min.js
+    - bootstrap-modal.js
+    - g_login.js
+    - /theme/js/oauthpopup.js
+#    - kpireport.js
+
+  has_layout:     true
+  layout:         layout

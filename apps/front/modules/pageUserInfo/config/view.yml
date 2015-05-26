@@ -1,0 +1,8 @@
+## YAML Template.
+---
+indexSuccess:
+  metas:
+    title: Thông tin tài khoản
+changepwdSuccess:
+  metas:
+    title: Thay đổi mật khẩu

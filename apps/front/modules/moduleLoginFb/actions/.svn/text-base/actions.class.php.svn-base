@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * moduleHtml actions.
+ *
+ * @package    Vt_Portals
+ * @subpackage moduleHtml
+ * @author     ngoctv1
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class moduleLoginFbActions extends sfActions
+{
+    public function executeIndex(sfWebRequest $request)
+    {
+        FacebookSession::setDefaultApplication( '750753605046019','54720ab4cd72698c6a10029d8d2c027f' );
+        // login helper with redirect_uri
+        $helper = new FacebookRedirectLoginHelper('http://vuagame.vn/' );
+        try {
+            $session = $helper->getSessionFromRedirect();
+        } catch( FacebookRequestException $ex ) {
+            // When Facebook returns an error
+        } catch( Exception $ex ) {
+            // When validation fails or other local issues
+        }
+        // see if we have a session
+        if ( isset( $session ) ) {
+            // graph api request for user data
+            $request = new FacebookRequest( $session, 'GET', '/me' );
+            $response = $request->execute();
+            // get response
+            $graphObject = $response->getGraphObject();
+            $fbid = $graphObject->getProperty('id');              // To Get Facebook ID
+            $fbfullname = $graphObject->getProperty('name'); // To Get Facebook full name
+            $femail = $graphObject->getProperty('email');    // To Get Facebook email ID
+            /* ---- Session Variables -----*/
+            $_SESSION['FBID'] = $fbid;
+            $_SESSION['FULLNAME'] = $fbfullname;
+            $_SESSION['EMAIL'] =  $femail;
+            /* ---- header location after session ----*/
+            header("Location: index.php");
+        } else {
+            $loginUrl = $helper->getLoginUrl();
+            header("Location: ".$loginUrl);
+        }
+
+    }
+
+}
